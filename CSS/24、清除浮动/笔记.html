@@ -1,0 +1,8 @@
+清除浮动：
+    1、浮动元素的最下面加入：clear:both(必须要是块元素) display:block
+    2、伪元素
+    .container:after{
+        content: '';
+        clear:both;
+        display: block;
+    }
