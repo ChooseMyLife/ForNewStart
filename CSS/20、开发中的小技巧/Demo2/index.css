@@ -1,0 +1,17 @@
+*{
+    padding: 0%;
+    margin: 0;
+}
+p{
+    background-color: orange;
+}
+a{
+    text-decoration: none;
+}
+
+.textcolor{
+    color: orange;
+}
+.textbgcolor{
+    background-color: #eee;
+}
