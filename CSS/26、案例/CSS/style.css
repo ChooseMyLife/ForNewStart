@@ -1,10 +1,50 @@
+html,body{
+    background: #fafafa;
+}
+
+
+/* 扫描定位二维码 */
+.banner-img {
+    width: 100%;
+    height: 100%;
+    margin-top: 107px;
+}
+.pdd-fixed {
+    position: fixed;
+    bottom: 150px;
+    left: 150px;
+    width: 162px;
+    background: #fff;
+}
+
+.pdd-app {
+    border: 2px solid #ffedf1;
+    margin: 8px;
+    padding: 20px 15px;
+}
+
+.pdd-app img {
+    width: 100%;
+    height: 100%;
+}
+
+.pdd-app-desc {
+    line-height: 20px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+
+/* 头部导航区 */
 .header{
+    z-index: 999;
     position: fixed;
     top: 0;
     left: 0;
     height: 103px;
     width: 100%;
     border-bottom: 4px solid #ed435d ;
+    background-color: #fff;
 }
 .header-main{
     width: 1200px;
@@ -47,4 +87,169 @@
 }
 .nav-item .nav-active{
     color: red;
+}
+
+/* 身体部分 */
+.body{
+    width: 1200px;
+    margin: 77px auto 30px auto;
+}
+.title{
+    border-bottom: 1px solid #c1c1c1;
+    padding-bottom: 17px;
+    margin-top: 55px;
+    margin-bottom: 45px;
+}
+.title-text{
+    font-size: 20px;
+    color: #363636;
+}
+.more{
+    font-size: 18px;
+    margin-right: 5px;
+    cursor: pointer;
+    color: #868686;
+}
+
+.content>a {
+    float: left;
+    background-color: #fff;
+    padding: 14px;
+    margin-right: 17px;
+    margin-bottom: 17px;
+}
+.content>a:last-child {
+    margin-right: 0;
+}
+
+.subject img{
+    width: 556px;
+    height: 276px;
+}
+.goods-group{
+    border: 1px solid #f6f6f6;
+
+}
+.goods{
+    background: #fff;
+    width: 160px;
+    margin: 0px 12px ;
+    position: relative;
+}
+.goods img{
+    width: 125px;
+    height: 125px;
+    display: block;
+    margin: 7px auto;
+}
+.goods-title{
+    font-size: 12px;
+    line-height: 18px;
+    height: 36px;
+    color: #111;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.goods-price{
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center;
+}
+.groups-price {
+    color:  #111;
+    font-size: 16px;
+}
+.price-mark{
+    font-size: 14px;
+    color: #cbcbcb;
+    text-decoration: line-through;
+}
+.subject:nth-child(2n){
+    margin-right: 0px;
+}
+
+/* 底部 */
+.pdd-foot{
+    background: #fff;
+    padding-top: 60px;
+    width: 100%;
+}
+
+.pdd-foot .pdd-foot-head{
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.head-group{
+    width: 666px;
+    margin-top: 20px;
+}
+.group-item{
+    width: 162px;
+    margin-right: 60px;
+    display: inline-block;
+}
+/* .group-item img{
+    width: 100%;
+    height: 100%;
+} */
+.group-item P{
+    margin: 8px auto;
+    color: #4d4d4d;
+    font-size: 16px;
+    text-align: center;
+}
+
+.head-info{
+    border-left: 1px solid #4d4d4d;
+    padding-left: 50px;
+}
+
+.info-title{
+    color: #4d4d4d;
+    font-size: 24px;
+    line-height: 24px;
+}
+.info-detail{
+    color: #4d4d4d;
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: 20px;
+}
+/* 底部-第二部分 */
+.pdd-nav{
+    width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+.pdd-nav-list-item {
+    display: inline-block;
+    cursor: pointer;
+    border-right: 1px solid   #c1c1c1;
+}
+.pdd-nav-list-item a{
+    color:  #666;
+    font-size: 16px;
+    margin: 0 6px;
+}
+.pdd-nav-list-item:last-child{
+    border-right: none;
+}
+/* 底部-第三部分 */
+.copyright{
+    background: #3f3e3e;
+    height: 130px;
+    font-size: 14px;
+    text-align: center;
+    color: #b1b1b1;
+}
+.pdd-foot-cr{
+    padding-top: 27px;
+}
+.pdd-foot-medicine{
+    padding-top: 17px;
+}
+.pdd-foot-record{
+    padding-top: 17px;
 }
