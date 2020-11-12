@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>wwh</title>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+    <script>
+        var num =10;
+        num++
+        console.log(num);
+
+        var sum =num++;  //sum = 10  num =11
+        var sum1 = ++num; // sum1 = 11  num =11
+
+        var sum = num+++10; //相当于 num++  +10   即 10 + 10 =20
+        var sum = ++num+10; // 11 + 10  = 21 
+        
+        var sum =1 
+        var  sum = ++num + ++ num; //  2+3 = 5  sum = 5 num =3
+        var sum = num++ + num++; // 1+2   sum =3 num = 3
+
+        var sum = ++num + num++; //2+2 sum =4 num 3
+        var sum = ++num + ++num + num++ + ++num;  // 2+3 +3 +5  sum = 13  num 5
+    </script>
+</body>
+</html>
