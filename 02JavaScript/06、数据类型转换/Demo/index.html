@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <input type="text" name="" id="a1" value="12">
+    <input type="text " id= "a2" value="5">
+    <input type="button" id="btn" value="计算" >
+    <input type="text" id='a3'>
+    <script>
+        var num = 12;
+        var bol =true;
+        console.log(typeof num , typeof bol);
+
+        var nums = num.toString();
+        var bols = String(bol);
+        console.log(typeof nums,typeof bols);
+
+        var str = '1+123';
+        var bol = false;
+        console.log(Number(str),Number(bol));
+        btn.onclick=function(){
+            a3.value =Number(a1.value)+Number(a2.value);
+        }
+    </script>
+</body>
+</html>
