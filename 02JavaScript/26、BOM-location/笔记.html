@@ -1,0 +1,21 @@
+一、bom：browser Object Model 浏览器对象模型 围绕浏览器
+    bom可以做的事情：
+        1、获取浏览器的型号（手机的型号）
+        2、url操作
+        3、屏幕的大小尺寸
+
+
+二、location 对象：操作当前浏览器的URL
+    
+    href:   获取当前浏览器的URL
+            设置对应跳转的URL
+            location.href= 'xxx' 可以跳转到对应的页面
+            但是，是在本页面进行的跳转，不是新窗口打开，怎么办？
+            window.open(url,'_blank')
+
+    search: 设置或者获取，从问号（？），开始的url
+    hash:   设置或者获取，从井号（#），开始的url
+    
+
+****解码decodeURIComponent()
+    编码encodeURIComponent()

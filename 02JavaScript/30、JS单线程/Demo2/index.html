@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+    <script>
+        //打印出 55555
+        // for(var i = 0;i<5;i++){
+        //     setTimeout(() => {
+        //         console.log(i);
+        //     }, 1000);
+        // }
+        //几秒输出几
+        // i==0 
+        // i==1
+        // i==2
+        // 第0秒输出3
+        // 第1秒后输出3
+        // 第2秒后输出3
+        for(var i = 0;i<3;i++){
+            setTimeout(() => {
+                console.log(i);
+            }, 1000*i,console.log('i==='+i));
+        }
+    </script>
+</body>
+</html>

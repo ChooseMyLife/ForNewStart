@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+        span{
+            display: inline-block;
+                padding: 50px;
+                border: 1px solid #ccc;
+                border-radius: 12px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="">
+        <span id='smoke'>王者荣耀</span>
+    </div>
+    <div><input type="button" value="开始" id="start">
+    <input type="button" value="停止"  id="stop"></div>
+
+    <script>
+        (()=>{
+            var start =document.getElementById('start');
+            var stop =document.getElementById('stop');
+            var smoke =document.getElementById('smoke');
+            var arr = ['王者荣耀','吃鸡','英雄联盟','连连看'];
+            var index =0;
+            var timmer = null;
+            smoke.innerHTML=arr[index];
+            start.onclick=()=>{
+                start.disabled=true;
+                timmer = setInterval(() => {
+                    index++;
+                    if (index>3) {
+                        index=0;
+                    }
+                    smoke.innerHTML=arr[index];
+                }, 10);
+            }
+            stop.onclick=()=>{
+                start.disabled=false;
+                clearInterval(timmer);
+            }
+
+        })();
+    </script>
+</body>
+</html>

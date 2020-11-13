@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+    <script>
+        //求0-100之间的和
+        var sum =0;
+        for(var i =1;i<101;i++){
+            sum +=i;
+        }
+        console.log(sum);
+
+        //求0-100之间奇数和偶数的和
+        var odd = 0;
+        var even = 0;
+        for (var i = 0; i < 101; i++) {
+            if(i%2==0){
+                odd+=i;
+            }
+            else{
+                even+=i;
+            }
+        }
+        console.log(odd+'-----'+even);
+
+        var sum1=0;
+        //0-100之间不能被7整除的数
+        for(var i=0;i<101;i++){
+            if(i%7!=0){
+                sum1+=i;
+                
+            }
+        }
+        console.log(sum1);
+    </script>
+</body>
+</html>
