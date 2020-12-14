@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<script>
+    //错误写法。性能低
+    var arr = [32,13,43,1,2,4,5,6];
+    var len = arr.length;
+    console.time('sort');
+
+    for (let i = 0; i < len; i++) {
+        for (let j = i+1; j < len; j++) {
+            if(arr[i]<arr[j]){
+                var temp = arr[j];
+                arr[j] = arr[i];
+                arr[i] = temp;
+            }
+        }
+    }
+    console.timeEnd('sort');
+    console.log(arr);
+
+    //正确写法，性能优
+    var arr1 = [32,13,43,1,2,4,5,6];
+    var len = arr1.length;
+    console.time('sort');
+
+    for (let i = 0; i < len-1; i++) {
+        for (let j = 0; j < len-i-1; j++) {
+            if(arr1[j]>arr1[j+1]){
+                var temp = arr1[j];
+                arr1[j] = arr1[j+1];
+                arr1[j+1] = temp;
+            }
+        }
+    }
+    console.timeEnd('sort');
+    console.log(arr1);
+    
+    var arr2 = [32,13,43,1,2,4,5,6];
+    var len = arr2.length;
+    console.time('sort');
+    arr2.sort((a,b)=>a-b);
+    console.timeEnd('sort');
+    console.log(arr2);
+</script>
+    
+
+</body>
+</html>

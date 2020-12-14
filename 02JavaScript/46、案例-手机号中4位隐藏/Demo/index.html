@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <input type="text" id="tel">
+    <input type="button" value="替换" id='changebtn'>
+    <div id ="endtel"></div>
+<script>
+    var tel = document.getElementById('tel'),
+    changebtn = document.getElementById('changebtn'),
+    endtel = document.getElementById('endtel');
+    changebtn.onclick=()=>{
+        var tel1 = tel.value;
+        tel.value=tel.value;
+        endtel.innerHTML= tel1.replace(tel1.slice(3,7),'****');
+        
+    }
+</script>
+</body>
+</html>

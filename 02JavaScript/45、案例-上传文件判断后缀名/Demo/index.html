@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <input type="file" name="file1" id="files">
+    <input type="button" value="判断后缀名" id= 'btn'>
+<script>
+    var btn = document.getElementById('btn'),
+    files = document.getElementById('files');
+    btn.onclick=function(){
+        console.log(files.value);
+        var val = files.value;
+        var idx = val.indexOf('.');
+        var filename  = val.slice(idx+1);
+        console.log(filename);
+        if(filename!='jpg'&& filename!='png'){
+            console.log('文件格式有误！');
+        }
+        else{
+            console.log('上传正确!');
+        }
+    }
+    
+</script>
+</body>
+</html>
