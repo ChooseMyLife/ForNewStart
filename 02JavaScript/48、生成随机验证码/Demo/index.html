@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+        #code{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div><input type="text" id="txt">
+    <span id="code">1c3c</span>
+</div>
+<div>
+    <input type="button" value="登录" id ="btn">
+
+</div>
+<script>
+    var code = document.getElementById('code'),
+    txt = document.getElementById('txt'),
+    btn = document.getElementById('btn');
+    code.onclick=()=>{
+        fRandom(4);
+    }
+    function fRandom(codeLen) {
+        var str = 'abcdef1234567890';
+        var strcode = '';
+        for (let i = 0; i < codeLen; i++) {
+            var n = Math.floor( Math.random()*str.length);
+            strcode+=str[n];
+        }
+        code.innerHTML=strcode;
+    }
+    btn.onclick=()=>{
+        if(txt.value.trim() === code.innerHTML.trim()){
+            location.href='http://www.baidu.com/';
+        }
+        else{
+            alert('验证码错误！');
+        }
+    }
+</script>
+</body>
+</html>
