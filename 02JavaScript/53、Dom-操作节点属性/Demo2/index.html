@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <label id="oLabel">
+    <input type="radio" name="radios" id="t">
+    <input type="radio" name="radios" id="f">
+    </label>
+<script>
+    var oLabel = document.getElementById('oLabel');
+    var oinput = oLabel.getElementsByTagName('input');
+    var inputlen = oinput.length;
+    for (let i = 0; i < inputlen; i++) {
+        const element = oinput[i];
+        element.setAttribute('data-title',i)
+        element.onclick=function(){
+            alert(this.getAttribute('data-title'));
+        }
+    }
+
+</script>
+</body>
+</html>

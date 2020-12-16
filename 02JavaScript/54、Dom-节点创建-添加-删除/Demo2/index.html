@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <ul id="uls">
+        <li>1</li>
+        <li>2</li>
+        <li>2</li>
+    </ul>
+<script>
+    var uls= document.getElementById('uls');
+    var oli = document.createElement('li');
+    oli.innerHTML='我要开始追了';
+    var lis = uls.getElementsByTagName('li')[0];
+    uls.insertBefore(oli,lis);
+</script>
+</body>
+</html>

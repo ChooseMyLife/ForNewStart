@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <input type="button" value="添加li" id="add">
+    <ul id="uls"></ul>
+<script>
+    var add = document.getElementById("add");
+    var uls = document.getElementById('uls');
+    add.onclick=function(){
+        var newli = document.createElement('li');
+        var lilen = document.getElementsByTagName('li').length;
+        newli.innerHTML=lilen;
+        uls.appendChild(newli);
+    }
+</script>
+</body>
+</html>

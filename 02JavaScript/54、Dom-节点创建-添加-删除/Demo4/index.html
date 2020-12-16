@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <ul id="uls1">
+        <li>11111<a href="#">删除</a></li>
+        <li>11111<a href="#">删除</a></li>
+        <li>11111<a href="#">删除</a></li>
+        <li>11111<a href="#">删除</a></li>
+        <li>11111<a href="#">删除</a></li>
+    </ul>
+<script>
+    var uls= document.getElementById('uls1');
+    var oA = document.getElementsByTagName('a');
+    var oAlen = oA.length;
+    for (var i = 0; i < oAlen; i++) {
+        oA[i].onclick=function(){
+            uls.removeChild(this.parentNode);
+        }
+    }
+</script>
+</body>
+</html>
