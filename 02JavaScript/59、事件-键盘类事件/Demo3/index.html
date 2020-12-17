@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+    *{margin: 0;padding: 0;}
+    .main{
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        position: absolute;
+        left: 0;
+    }
+    </style>
+</head>
+<body>
+    <div class="main" id="main"></div>
+<script>
+    var main = document.getElementById('main');
+    document.onkeydown=function(e){
+        switch (e.keyCode) {
+            case 37:
+                console.log('左');
+                main.style.left=main.offsetLeft-10+'px';
+                break;
+            case 38:
+                console.log('上');
+                main.style.top=main.offsetTop-10+'px';
+                break;
+            case 39:
+                console.log('右');
+                main.style.left=main.offsetLeft+10+'px';
+                break;
+            case 40:
+                console.log('下');
+                main.style.top=main.offsetTop+10+'px';
+                break;
+            
+            default:
+                break;
+        }
+    }
+</script>
+</body>
+</html>

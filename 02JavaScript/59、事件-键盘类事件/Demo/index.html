@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <input type="text" id="inp">
+<script>
+    var inp = document.getElementById('inp');
+    inp.onkeydown=function(e){
+        if (e.keyCode==13) {
+            var txtval = inp.value
+        }
+    }
+    inp.onkeyup=function(){
+        console.log('2');
+    }
+</script>
+</body>
+</html>

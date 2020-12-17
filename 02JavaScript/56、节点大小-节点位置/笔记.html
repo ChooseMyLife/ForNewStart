@@ -1,0 +1,31 @@
+一、获取样式表中的样式
+
+    语法格式：
+        getComputedStyle(节点, null).样式名称
+
+
+二、获取元素的大小和偏移位置
+    
+    大小：
+        节点对象.offsetWidth
+        节点对象.offsetHeight
+
+        *****计算 水平方向 width + 左右padding + 左右border-width
+            没有px单位，返回的是数值类型
+        
+    大小： 
+        节点对象.clientWidht
+        节点对象.clientHeight
+        *****计算 水平方向 width + 左右padding
+            没有px单位，返回的是数值类型
+    
+    偏移：（距离）
+        节点对象.offsetLeft(从左到右)相对整个文档
+        节点对象.offsetTop(从上到下)相对于整个文档
+        *******如果节点没有定位的情况下：相对于整个文档
+               若果节点有定位，则相对于父节点
+
+三、滚动距离
+    
+    节点对象.scrollLeft
+    节点对象.scrollTop

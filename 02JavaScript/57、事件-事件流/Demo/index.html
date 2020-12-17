@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+        .container{
+            width: 300px;
+            height: 300px;
+            background: pink;
+        }
+        .wrap{
+            width: 50px;
+            height: 50px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="main">
+        <div class="wrap" id="wrap"></div>
+    </div>
+<script>
+    var main = document.getElementById('main');
+    var wrap = document.getElementById('wrap');
+    main.onclick=function(){
+        alert('main');
+    }
+    wrap.onclick=function(){
+        alert('wrap');
+    }
+    document.body.onclick=function(){
+        alert('body');
+    }
+    </script>
+</body>
+</html>

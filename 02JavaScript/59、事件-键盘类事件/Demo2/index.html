@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <input type="text" id="inp">
+    <ul id="uls">
+
+    </ul>
+<script>
+    var inp = document.getElementById('inp');
+    var uls = document.getElementById('uls');
+    inp.onkeydown=function(e){
+        if (e.keyCode==13) {
+            var txtval = inp.value;
+            var lis = document.createElement('li');
+            lis.innerHTML = txtval;
+            uls.appendChild(lis);
+        }
+    }
+    inp.onkeyup=function(){
+        console.log('2');
+    }
+</script>
+</body>
+</html>
