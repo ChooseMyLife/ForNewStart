@@ -1,0 +1,23 @@
+事件处理程序
+    main.onclick = function(){
+        xxxx
+    }
+    html 事件处理程序 ： 把事件直接写在节点上
+        缺点：代码耦合
+
+    Dom  0级事件处理程序 ： main.onclick   = function(){}
+
+    缺点： 同样的元素 的同样事件会被覆盖
+
+    Dom 2级事件处理程序：
+        dom对象.addEventListener(事件名称,函数,false|true);
+            注意：
+                事件名称：需要加入on
+                false：冒泡
+                true : 捕获
+
+            缺点：在IE8或者以下不兼容
+    
+    IE事件处理程序：
+        dom对象.attachEvent(事件名称,函数)
+            注意：事件名称：需要加入on

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>wwh</title>
+    <style type="text/css"></style>
+  </head>
+  <body>
+    <input type="button" value="添加li" id="btn" />
+
+    <ul id="uls">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <script>
+      var uls = document.getElementById("uls");
+      var btn = document.getElementById("btn");
+      btn.onclick = function () {
+        var newli = document.createElement("li");
+        newli.innerHTML = 1;
+        uls.appendChild(newli);
+      };
+      uls.onclick = function (e) {
+        if (e.target.nodeName == "LI") {
+          e.target.style.backgroundColor = "red";
+        }
+      };
+      // var lis =document.getElementsByTagName('li');
+      // var lilen = lis.length;
+      // for (let i = 0; i < lis.length; i++) {
+      //     const element = lis[i];
+      //     element.onclick =function(){
+      //         this.style.background='red';
+      //     }
+      // }
+      // var uls = document.getElementById('uls');
+      // var btn = document.getElementById('btn');
+      // btn.onclick=function(){
+      //     var newli = document.createElement('li');
+      //     newli.innerHTML=lis.length+1;
+      //     uls.appendChild(newli);
+      //     for (let i = 0; i < lis.length; i++) {
+      //     const element = lis[i];
+      //     element.onclick =function(){
+      //         this.style.background='red';
+      //     }
+      // }
+      // }
+    </script>
+  </body>
+</html>

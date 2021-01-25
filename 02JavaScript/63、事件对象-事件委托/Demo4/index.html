@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+        *{margin:0;padding: 0;}
+        .u-l{
+            float: left;
+        }
+        .u-r{
+            float: right;
+        }
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        a{
+            color: #fff;
+            text-decoration: none;
+        }
+        ul{
+            list-style: none;
+        }
+        input{
+            outline: none;
+        }
+        .header{
+            color: #fff;
+            background:#000;
+        }
+        .warp{
+            width: 600px;
+            margin: 0 auto;
+        }
+        .add{
+            margin-top: 8px;
+        }
+        .add input{
+            padding: 3px 8px;
+            border-radius: 8px;
+            border: 1px solid #f7f7f7;
+        }
+        .list{
+            margin-top: 80px;
+        }
+        .list ul li {
+            padding: 6px 12px;
+            color: #fff;
+            background-color: #000;
+            border-left: 6px solid orange;
+            border-radius: 8px;
+        }
+        .list ul li+li{
+            margin-top: 15px;
+        }
+        .num{
+            text-align: right;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="warp clearfix">
+            <h1 class="u-l">学习路线</h1>
+            <div class="u-r add">
+                <input type="text" id='txt'>
+                <input type="button" value="添加" id="addbtn">
+            </div>
+        </div>
+    </div>
+
+    <div class="g-container">
+        <div class="warp">
+            <div class="list">
+                <p class="num" id="num"></p>
+                <ul id="uls">
+                    <li class="clearfix">
+                        <span class="u-l">1</span><a class="u-r" href="#">删除</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<script>
+    var txt = document.getElementById('txt'),
+    addbtn = document.getElementById('addbtn'),
+    num = document.getElementById('num'),
+    uls = document.getElementById('uls');
+
+    addbtn.onclick=function(){
+        var txtval = txt.value;
+        if (txtval=='') {
+            return;
+        }
+        var newli  = document.createElement('li');
+        newli.className='clearfix';
+        newli.innerHTML='<span class="u-l">'+txtval.trim()+'</span><a class="u-r" href="#">删除</a>';
+        uls.appendChild(newli);
+        num.innerText = uls.getElementsByTagName('li').length; 
+        
+    }
+    uls.onclick=function(e){
+        if(e.target.nodeName == 'A'){
+            uls.removeChild(e.target.parentNode);
+            num.innerText = uls.getElementsByTagName('li').length; 
+        }
+    }
+</script>
+</body>
+</html>

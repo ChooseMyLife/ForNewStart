@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+        .main{
+            width: 400px;
+            height: 400px;
+            background-color: red;
+        }
+        .wrap{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="main" id="main">
+        <div class="wrap" id="wrap"></div>
+    </div>        
+<script>
+var main = document.getElementById('main');
+var wrap = document.getElementById('wrap');
+main.onclick=function(){
+    alert('main');
+}
+wrap.onclick = function(e){
+    e.stopPropagation();
+    alert('wrap');
+}
+</script>
+</body>
+</html>

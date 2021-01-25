@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <form action="http://www.baidu.com" onsubmit="return false;">
+        <input type="submit" value="跳转">
+    </form>
+    <a href="http://www.baidu.com" id="goherf">跳转</a>
+<script>
+    var goherf =document.getElementById('goherf');
+    goherf.onclick=function(e){
+        e.preventDefault();
+    }
+</script>
+</body>
+</html>
