@@ -14,10 +14,10 @@ drag.onmousedown = function (e) {
         var l = e.clientX - x;
         //鼠标距离浏览器顶部的距离值
         var t = e.clientY - y;
-        if (l<0) {
+        if (l < 0) {
             l = 0;
         }
-        else if (l>document.documentElement.clientWidth-drag.offsetWidth) {
+        else if (l > document.documentElement.clientWidth - drag.offsetWidth) {
             l = document.documentElement.clientWidth - drag.offsetWidth;
         }
         if (t < 0) {
@@ -32,6 +32,5 @@ drag.onmousedown = function (e) {
 }
 
 drag.onmouseup = function (e) {
-    debugger;   
     document.onmousemove = null;
-}   
+}
