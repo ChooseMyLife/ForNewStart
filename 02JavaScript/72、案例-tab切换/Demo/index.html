@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+    *{margin: 0;padding: 0;}
+    ul{
+        list-style: none;
+        }
+    .tabs-head li{
+        display: inline-block;
+        padding: 10px 6px;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+    .tabs-head li.on{
+        border-bottom: 2px solid orange;
+    }
+    .tabs-body li {
+        padding: 10px 6px;
+    }
+    .tabs-body ul{
+        display: none;
+    }
+    .tabs-body ul.show{
+        display: block;
+    }
+    </style>
+</head>
+<body>
+    <div class="tabs">
+        <ul class="tabs-head" id="tabshead">
+            <li class="on">公告</li>
+            <li>规则</li>
+            <li>论坛</li>
+            <li>安全</li>
+            <li>公益</li>
+        </ul>
+    </div>
+    <div class="tabs-body" id='tabsbody'>
+        <ul class="show">
+            <li>公告1</li>
+            <li>公告2</li>
+            <li>公告3</li>
+        </ul>
+        <ul>
+            <li>规则1</li>
+            <li>规则2</li>
+            <li>规则3</li>
+        </ul>
+        <ul>
+            <li>论坛1</li>
+            <li>论坛2</li>
+            <li>论坛3</li>
+        </ul>
+        <ul>
+            <li>安全1</li>
+            <li>安全2</li>
+            <li>安全3</li>
+        </ul>
+        
+        <ul>
+            <li>公益1</li>
+            <li>公益2</li>
+            <li>公益3</li>
+        </ul>
+    </div>
+<script>
+    var tabshead = document.getElementById('tabshead');
+    var tabsheadLi = tabshead.getElementsByTagName('li');
+    var tabsheadLiLen = tabsheadLi.length;
+
+    var tabsbody = document.getElementById('tabsbody');
+    var tabsbodyUl = tabsbody.getElementsByTagName('ul');
+    for (let i = 0; i < tabsheadLiLen; i++) {
+        const element = tabsheadLi[i];
+        element.index = i;
+        element.onmouseover=function(){
+            //先清空每一个下边框
+            for (let j = 0; j < tabsheadLiLen; j++) {
+                tabsheadLi[j].className='';
+                tabsbodyUl[j].style.display='none';
+            }
+            this.className='on';
+            tabsbodyUl[this.index].style.display='block';
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+一、什么是正则表达式
+
+    规则表达式
+    
+二、应用场景
+    表单验证
+
+三、正则的使用
+    定义：
+        字面量：//
+        构造函数: new RegExp()
+            var reg1 = /a/;
+            var reg2 = new RegExp('a');
+            console.log(reg1,reg2);
+        区别：
+            new RegExp() :放入变量
+
+四、正则的方法
+
+    test():检测内容是否与正则匹配
+        如果匹配返回true
+        如果不匹配返回false
+    exec(): 检测内容是否与正则匹配
+        如果匹配返回数组
+        如果不匹配返回null
