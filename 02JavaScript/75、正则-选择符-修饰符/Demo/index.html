@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+<script>
+    var reg1 = /com|cn|net|cdn/;
+    var str1 = 'com';
+    console.log( reg1.test(str1));
+
+    var reg2 = /[a-z]/i;
+    var str2 = 'AA';
+    console.log(reg2.test(str2));
+
+    var reg3 = new RegExp('[a-z]','i');
+    var str3 = 'AA';
+    console.log(reg3.test(str3));
+
+    var reg4 = /a/g;
+    var str4 = 'abcaefadm';
+    console.log(str4.replace(reg4,'*'));
+</script>
+</body>
+</html>

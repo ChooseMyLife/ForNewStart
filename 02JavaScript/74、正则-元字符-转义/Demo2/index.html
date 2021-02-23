@@ -9,21 +9,22 @@
 <body>
 
 <script>
-    var reg1 = /[abc]/;
-    var str1 = 'ac';
+    var reg1 = /\d/;
+    var str1 = '5';
     console.log(reg1.test(str1));
 
-        var reg2 = /[^abc]/;
-    var str2 = 'dd';
+    var reg2 = /\w/;
+    var str2 = 'a';
     console.log(reg2.test(str2));
-
-    var reg3 = /[0-3]/;
-    var str3 = '1';
+    var reg3 = /\s/;
+    var str3 = ' ';
     console.log(reg3.test(str3));
-
-    var reg4 = /[a-zA-Z]/;
-    var str4 = 'A';
+    var reg4 = /\ba/;
+    var str4 = 'c a';
     console.log(reg4.test(str4));
+    var reg5 = /./;
+    var str5 = '\n';
+    console.log(reg5.test(str5));
 </script>
 </body>
 </html>

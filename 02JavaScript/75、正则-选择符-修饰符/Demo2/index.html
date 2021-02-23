@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <input type="text" id="txt">
+    <ul id="uls"></ul>
+<script>
+    var txt = document.getElementById('txt');
+    var uls = document.getElementById('uls');
+    var reg1 = /菜逼|菜B|操|尼玛/g;
+    txt.onkeyup=function(e){
+        var val = this.value;
+        
+        if(e.keyCode=='13'){
+            if (reg1.test(val)) {
+                val = val.replace(reg1,'*');
+            }    
+            var lis = document.createElement('li');
+            lis.innerHTML=val;
+            uls.appendChild(lis);
+            this.value='';
+        }
+
+    }
+</script>
+</body>
+</html>
