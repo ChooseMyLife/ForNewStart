@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+<script>
+    var reg1 = /\d(?=[a-z])/g;
+    var str1 = '1a2b3c*d5ffff6';
+    console.log(str1.replace(reg1,'*'));
+        var reg2 = /\d(?![a-z])/g;
+    var str2 = '1a2b3c*d5ffff6';
+    console.log(str2.replace(reg2,'*'));
+</script>
+</body>
+</html>

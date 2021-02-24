@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <input type="text" id="txt">
+<script>
+    //(?=.*\d) 任意字符后必须要有数字
+    //(?=.*[a-z]) 任意字符后必须要字母
+    var reg1 = /^(?=.*\d)(?=.*[a-z])[0-9a-z]{3,6}$/;
+    var txt = document.getElementById('txt');
+    txt.oninput=function(){
+        console.log(reg1.test(this.value));
+        console.log(reg1.exec(this.value));
+    }
+</script>
+</body>
+</html>
