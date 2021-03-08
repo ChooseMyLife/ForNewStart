@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <input type="file" id="file">
+<script>
+    var file = document.getElementById('file');
+    file.onchange=function(){
+        var names = this.files[0].name;
+        var reg = /(.jpg|.png|.jpeg)$/i;
+        //如果不匹配
+        if (!reg.test(names)) {
+            alert('文件名不匹配');
+            this.value = '';
+        }
+        else {
+            
+        }
+    }
+</script>
+</body>
+</html>

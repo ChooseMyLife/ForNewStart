@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <div id="main"></div>
+<script>
+    var arr = [];
+    //递归函数
+    function fun(dom) {
+        var node = dom.parentNode;
+        if (node) {
+            arr.push(node);
+            fun(node);
+        }
+    }
+    fun(document.getElementById('main'));
+    console.log(arr);
+</script>
+</body>
+</html>

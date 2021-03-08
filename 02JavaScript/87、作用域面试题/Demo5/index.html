@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+<script>
+    var name ='world';
+    (function () {
+        if (typeof name=='undefined') {
+            var name ='Jack';
+            console.log('GoodBye' +name);
+        }else {
+            console.log('Hello '+ name);
+        }
+    })();           //输出GoodByeJack    变量提升
+
+    var f= true;
+    if (f==true) {
+        var a = 10;
+    }
+    function fn() {
+        var b =20;
+        c=30;
+    
+    }
+    fn();
+    console.log(a); //10
+    //console.log(b); //error
+    console.log(c); //30  隐式 window.c
+</script>
+</body>
+</html>

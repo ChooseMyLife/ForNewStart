@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+<script>
+    function fun(arr) {
+        var result = [];
+        for (let i = 0; i < arr.length; i++) {
+            const element = arr[i];
+            if (typeof element == 'object') {
+                result = result.concat(fun(element));       //利用递归 将多维数据进行 多层次分化
+            }
+            else {
+                result.push(element);
+            }
+            
+        }
+        return result;
+    }
+    console.log(fun(['a','b','c',['d','f']]));
+</script>
+</body>
+</html>

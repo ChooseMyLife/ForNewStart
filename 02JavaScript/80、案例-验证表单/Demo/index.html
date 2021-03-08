@@ -26,7 +26,6 @@
             border: none;
         }
         .reg-error{
-
         }
     </style>
 </head>
@@ -35,22 +34,43 @@
     <div class="reg-item">
         <div>
             <label for="">手机号</label>
-            <input type="text" placeholder="请输入手机号">
+            <input type="text" placeholder="请输入手机号" id="tel">
         </div>
-        <div class="reg-error"><span>*输入有误</span></div>
+       <div class="reg-error"><span> <!-- *输入有误--></span></div> 
 
     </div>
     <div class="reg-item">
         <div>
             <label for="">用户名</label>
-            <input type="text" placeholder="请输入用户名">
+            <input type="text" placeholder="请输入用户名" id="userName">
         </div>
-        <div class="reg-error"><span>*输入有误</span></div>
+        <div class="reg-error"><span><!-- *输入有误--></span></div>
     </div>
 
 </form>
 <script>
-
+    var tel = document.getElementById('tel'),
+    userName = document.getElementById('userName');
+    tel.oninput = function () {
+        debugger
+        var reg = /^1[3578]\d{9}$/;
+        fmsg(this,reg,'您输入的手机号有误');
+    }
+    userName.oninput=function(){
+        var reg = /^(?=.*\d)(?=.*[a-z])(?=.*\_)\w{4,20}$/;
+        fmsg(this,reg,'您输入的登录名有误'); 
+    }
+    function fmsg(that,reg,errormsg) {
+        var span = that.parentNode.parentNode.children[1].querySelector('span');
+        if (reg.test(that.value)) {
+            span.style.color = '#ccc';
+            span.innerHTML = '*正确';
+        }
+        else {
+            span.style.color = 'orange';
+            span.innerHTML = errormsg;
+        }
+    }
 </script>
 </body>
 </html>

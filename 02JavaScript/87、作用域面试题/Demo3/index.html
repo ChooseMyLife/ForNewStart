@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+<script>
+    var bar =1;
+    function test() {
+        console.log(bar);       //undefined
+        var bar =2 ;
+        console.log(bar);       //2
+    }
+    test();
+
+    var foo = function () {
+        alert('1');
+    }
+    function foo() {
+        alert('2')
+    }
+    console.log(foo()); //变量大于函数声明 
+</script>
+</body>
+</html>

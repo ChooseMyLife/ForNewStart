@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+<script>
+    //var str; 将变量提升到第一个，然后为undefined 未赋值
+    function fun() {
+        return function () {
+            console.log(123);
+        }
+    }
+    console.log(fun()()); 
+
+
+    console.log(str);   //undefined
+    var str = '2';
+    console.log(str);    //2
+    
+    
+    function fun1() {
+
+        console.log(str);   //undefined
+        var str = '1';
+        console.log(str);   //1
+    }
+    fun1();
+
+    console.log(x);     //undefined
+    if (false) {
+        var x = '123';
+
+    }
+    console.log(x);     //undefined
+
+</script>
+</body>
+</html>

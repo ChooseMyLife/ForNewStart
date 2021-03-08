@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+<script>
+    var value ='';
+    var index = 0;
+    var str = 'abcffbfffbem';
+    var arr = str.split('');
+    str = arr.sort().join('');
+    var reg = /(\w)\1+/g;
+    str.replace(reg,function (val,item) {
+        if (index<val.length) {
+            index = val.length;
+            value = item;
+        }
+    });
+    console.log(str.match(reg));
+    console.log('出现次数最多的字符是：'+value,'出现的次数是：'+index);
+</script>
+</body>
+</html>

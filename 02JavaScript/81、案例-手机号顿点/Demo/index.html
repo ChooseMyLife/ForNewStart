@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <p id="tel"></p>
+<script>
+    var tel = document.getElementById('tel');
+    function fTelFormat(tel) {
+        return tel.replace(/^(\d{3})(\d{4})(\d{4})$/,'$1 $2 $3');
+    }
+    tel.innerHTML=fTelFormat('17876253362');
+    console.log(fTelFormat('17876253362'));
+</script>
+</body>
+</html>
