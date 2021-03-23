@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+<script>
+    var obj1 ={
+        name:'张三',
+        get changeName (){
+            return this.name;
+        },
+        set changeName(val){
+            this.name = val;
+        }
+     }
+     obj1.changeName='李四';
+     console.log(obj1.changeName);
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+<script>
+    var str1 = '123';
+    function fun() {
+        return '111';
+    }
+    var arr  = [1,2,3]
+    var obj = {
+        str1 :'456',
+        run : function () {
+            return 22;
+        },
+        arr:['a','b','c']
+    }
+    for (const key in obj) {
+        if (Object.hasOwnProperty.call(obj, key)) {
+            const element = obj[key];
+            console.log(element);
+        }
+    }
+</script>
+</body>
+</html>

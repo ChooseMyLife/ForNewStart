@@ -9,13 +9,9 @@
 <body>
 
 <script>
-    function fun(n) {
-        return function (m) {
-            return n+=m;
-        };
-    }
-    var f = fun(5);
-    console.log(f(2));
+    var obj1 = Object.create(Object.prototype);
+    console.log(obj1);
+
 </script>
 </body>
 </html>

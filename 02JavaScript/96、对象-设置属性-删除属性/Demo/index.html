@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+<script>
+    var obj1 = {
+        age:18,
+        5:'你好'
+    };
+    obj1.__proto__.abc = '321';
+    console.log('username' in obj1);
+    console.log('abc' in obj1);
+    console.log(obj1.hasOwnProperty('age'));
+    console.log(obj1.hasOwnProperty('abc'));
+</script>
+</body>
+</html>

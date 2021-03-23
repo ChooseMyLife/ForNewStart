@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+<script>
+    var obj1 = {
+        a:1,
+        b:'2',
+        c:true,
+        d:undefined,
+        e:null,
+        f:{},
+        g:[1,2,2,3],
+        h:function () {
+            return 111;
+        }
+
+    }
+    function Fun() {
+        this.name = '张三';
+        this.run = function () {
+            return '123';
+        }
+    }
+    var obj2 = new Fun();
+    console.log(obj2.name,obj2.run());
+</script>
+</body>
+</html>

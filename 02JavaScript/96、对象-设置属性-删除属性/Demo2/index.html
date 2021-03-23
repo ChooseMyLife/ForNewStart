@@ -9,13 +9,13 @@
 <body>
 
 <script>
-    function fun(n) {
-        return function (m) {
-            return n+=m;
-        };
-    }
-    var f = fun(5);
-    console.log(f(2));
+var obj1 = {
+        age:18,
+        5:'你好'
+    };
+    console.log(obj1.age);
+    delete obj1.age;
+    console.log(obj1.age);  //undefined
 </script>
 </body>
 </html>

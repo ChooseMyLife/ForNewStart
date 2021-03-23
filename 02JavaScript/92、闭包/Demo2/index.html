@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <ul id="uls">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+<script>
+    var lis = document.getElementsByTagName('li');
+    var lislength = lis.length;
+    for (var i = 0; i < lislength; i++) {
+        (function () {
+            var idx = i;
+            lis[i].onclick= function () {
+            console.log(idx);
+        }
+        })()
+    }
+    for (let i = 0; i < lislength; i++) {
+            lis[i].onclick= function () {
+            console.log(i);
+        }
+    }
+</script>
+</body>
+</html>
