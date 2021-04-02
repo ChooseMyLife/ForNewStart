@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+<script>
+    function fParseQueryString(url) {
+        var obj = {}
+        var urls = url.split('?')[1];
+        var arr = urls.split('&');
+
+        for (let i = 0,len = arr.length; i < len; i++) {
+            const element = arr[i];
+            var brr = element.split('=');
+            obj[brr[0]] = brr[1];
+        }
+        return obj;
+    }
+    console.log(fParseQueryString('https://www.baidu.com/s?wd=%E6%B5%8B%E8%AF%95&rsv_spt=1&rsv_iqid=0xf4d3358d000453cb&issp=1&f=8&rsv_bp=1&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_dl=tb&rsv_enter=0&rsv_sug3=5&rsv_sug1=3&rsv_sug7=101&rsv_btype=i&inputT=1334&rsv_sug4=1807'));
+</script>
+</body>
+</html>

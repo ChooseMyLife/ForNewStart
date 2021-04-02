@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+<script>
+    function Parent(name) {
+        this.name = name;
+        this.sex = '男'
+    }
+    Parent.prototype.run = function () {
+        return 111;
+    }
+    function Child(CName) {
+        this.age=12;
+        Parent.call(this,CName)
+    }
+    var abj1 = new Child('张三')
+    var obj2 = new Child('李四')
+    abj1.sex = '女'; 
+    Child.prototype = new Parent();
+    console.log(abj1.name === obj2.name);
+    console.log(abj1.run === obj2.run);
+    console.log(abj1,obj2);
+    console.log(abj1.prototype.sex);
+</script>
+</body>
+</html>

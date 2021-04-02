@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+<script>
+    var obj = {
+        x:2,
+        run :function(){
+            return this.x;
+        }
+    };
+    console.log(obj.run()); //2
+    var f= obj.run;
+    console.log(f());       //undefined
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+<script>
+    var x =1 ;
+    var obj ={
+        x:2,
+        run:function(val){
+            return this.x +val;
+        },
+        test:function(val1,val2){
+            return this.x +val1+val2;
+        }
+    }
+    console.log(obj.run('你好'));
+    var f = obj.run;
+    console.log(f.call(obj,'不好'));
+    console.log(f.call(window,'nima'));
+    console.log(f.apply(obj,['好不好']));
+    var fn = obj.test;
+    console.log(fn.call(obj,'nihaoya','wobuhaoya'));
+    console.log(fn.apply(obj,['123','321']));
+    console.log(fn.bind(obj,'测科','再见')());
+</script>
+</body>
+</html>

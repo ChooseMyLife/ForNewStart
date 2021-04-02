@@ -1,0 +1,17 @@
+原型模式:prototype
+
+    function Fun(){
+
+    }
+    Fun.prototype = {
+        共享方法|共享属性
+    }
+    new Fun();
+
+
+
+
+注意：
+    1、函数拥有prototype属性|对象
+    2、共享的属性和方法在prototype中，不共享的放在构造函数中    
+    3、new缺点：无法共享属性和方法

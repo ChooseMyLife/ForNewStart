@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+<script>
+    function Fun() {
+        this.run =function () {
+            return 111;
+        }
+    }
+    Fun.prototype.person = function () {
+        return 222;
+    };
+    Fun.prototype.run = function () {
+        return 2333;
+    };
+    var obj1 = new Fun();
+    var obj2 = new Fun();
+    console.log(obj1.person === obj2.person);
+    console.log(obj1.run());
+</script>
+</body>
+</html>

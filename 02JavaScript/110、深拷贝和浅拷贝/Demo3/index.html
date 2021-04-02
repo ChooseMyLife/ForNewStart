@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+<script>
+    var obj1 = {
+        a:1,
+        b:{c:2}
+        }
+    function fun(obj) {
+        var m = {};
+        if (typeof obj == 'object') {
+            for (var k in obj) {
+                if (obj.hasOwnProperty(k)) {
+                    if(typeof obj[k]=='object'){
+                        m[k] = fun(obj[k]);
+                    }
+                    else {
+                        m[k] = obj[k];
+                    }
+                }
+            }
+        }
+        return m;
+    }
+    var createobj = fun(obj1);
+    console.log(createobj.b.c);
+    createobj.b.c='321';
+    console.log(obj1,createobj);
+</script>
+</body>
+</html>

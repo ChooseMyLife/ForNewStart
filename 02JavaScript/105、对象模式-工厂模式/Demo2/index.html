@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+<script>
+    function fun(type,text) {
+        var o = Object();
+        if (type=='alert') {
+            window[type](text);
+        }
+        if (type=='confirm') {
+            window[type](text);
+        }
+        o.run = function () {
+            return 1111;
+        }
+        return o;
+    }
+    var obj1 = fun('alert','123');
+    var obj2 = fun('confirm','浓牛奶');
+    console.log(obj1.run === obj2.run); //false 
+</script>
+</body>
+</html>

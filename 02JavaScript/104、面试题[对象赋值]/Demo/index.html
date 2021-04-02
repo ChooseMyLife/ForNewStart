@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+<script>
+    var a = {};
+    var b = {
+        key:'a'
+    };
+    var c ={
+        key:'c'
+    }
+    a[b] = '123'; //  a[{key:'a'}] = 123
+    a[c] = '456'; //  a[{key:'c'}] = 456
+    // {
+    //    b:'123',
+    //    c:'456'
+    //}
+    //其实 正确的是  a ={[object Object]: "456"} 
+    console.log(a[b]); // a[{key:'a'}] = 456
+    console.log(a);
+</script>
+</body>
+</html>

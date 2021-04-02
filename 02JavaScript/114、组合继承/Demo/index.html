@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+<script>
+    function Parent() {
+        this.name = '张三'
+    }
+    function Child() {
+        this.age;
+    }
+    //原型共享属性和方法    缺点：无法给父构造函数传递参数
+    Child.prototype= new Parent();
+    var obj1 = new Child();
+    var obj2 = new Child();
+    console.log(obj1,obj2);
+</script>
+</body>
+</html>

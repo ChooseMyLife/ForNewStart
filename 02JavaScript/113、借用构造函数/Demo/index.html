@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+<script>
+    function Parent() {
+        this.name = '张三';
+        this.arr = [1,2,3];
+    }
+    function Child() {
+        this.age= 20;
+    }
+    Child.prototype = new Parent();
+    var obj1 = new Child();
+    var obj2 = new Child();
+    obj1.arr[0] = '你好';
+    console.log(obj1,obj2);
+</script>
+</body>
+</html>

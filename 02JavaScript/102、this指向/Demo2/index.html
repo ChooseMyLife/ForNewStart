@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+<script>
+    var x= 1; 
+    var obj = {
+        x:2,
+        run :function(){
+            return function () {
+                return this.x;
+            }
+        }
+    };
+    console.log(obj.run()()); //1
+
+    //等同于 
+    var f = obj.run();
+    console.log(f());
+
+</script>
+</body>
+</html>

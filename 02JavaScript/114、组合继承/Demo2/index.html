@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+<script>
+    function Parent(name) {
+        this.name = name;
+    }
+    function Child(cName) {
+        Parent.call(this,cName);
+        this.age=12;
+    }
+    var obj1 = new Child('李四');
+    var obj2 = new Child('王五');
+    console.log(obj1,obj2);
+</script>
+</body>
+</html>

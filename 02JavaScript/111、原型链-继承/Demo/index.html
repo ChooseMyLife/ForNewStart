@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+<script>
+    function Fun() {
+        this.name = '张三'
+    }
+    Fun.prototype.name='李四';
+    var obj1 = new Fun();
+    console.log(obj1);
+
+    //继承
+    function Person() {
+        this.name='张三';
+    }
+    function Student() {
+        this.age='18';
+    }
+    Student.prototype = new Person();
+    var obj = new Student();
+    console.log(obj);
+</script>
+</body>
+</html>
