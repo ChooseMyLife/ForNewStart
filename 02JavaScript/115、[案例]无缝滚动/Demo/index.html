@@ -23,6 +23,12 @@
             border: 1px solid #ccc;
             overflow: hidden;
         }
+        .scroll-y{
+            width: 100px;
+            height: 300px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+        }
 
     </style>
 </head>
@@ -39,6 +45,19 @@
             <li>8</li>
         </ul>
     </div>  
+
+    <div class="scroll-y" id="scrolly">
+        <ul class="clear-fix">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+        </ul>
+    </div> 
 <script>
     var scrollx = document.getElementById('scrollx');
     var ul = scrollx.getElementsByTagName('ul')[0];
