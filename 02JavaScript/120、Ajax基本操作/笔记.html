@@ -1,0 +1,32 @@
+一、HTTP请求
+    get 用于获取数据，get是在URL上传递数据，存储量较少，安全低。
+    POST：用于上传数据（表单），POST安全性一致。容易几乎无限。
+
+二、AJAX
+    1）创建ajax对象
+        IE6以上: new XMLHttpRequest();
+        IE6:new ActiveXObject("Microsoft.XMLHTTP");
+    2）链接服务器
+        ajax对象open('post|get','url',true|false 是否异步);
+    
+    3）发送请求
+        ajax对象send()
+
+    4）接收返回值
+    onreadyStatechange  事件；当请求被发送到服务器时，我们需要执行一些基于响应的操作，
+    当readyState改变的时候，就会触发这个执行。
+
+        readyState 请求的状态，返回的状态码（0-4）
+        0（未初始化），open还没有调用
+        1 [载入]已经调用了send()正在发送请求
+        2 [载入完成]:send()方法完成，已经收到全部的相应内容
+        3 [解析]：正在解析相应内容
+        4 [完成]：响应内容解析完成，可以在客户端用了
+
+    readyState== 4 完成（数据可用）
+        status返回请求结果码
+        200 成功
+        404 未找到
+        5**  开头 服务器错误
+        
+        responseText返回内容

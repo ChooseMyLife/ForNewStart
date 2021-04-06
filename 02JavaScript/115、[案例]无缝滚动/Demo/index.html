@@ -59,6 +59,7 @@
         </ul>
     </div> 
 <script>
+    /*
     var scrollx = document.getElementById('scrollx');
     var ul = scrollx.getElementsByTagName('ul')[0];
     var lis = ul.getElementsByTagName('li');
@@ -76,6 +77,53 @@
             ul.style.marginLeft = '0px';
         }
     }, 25);
+*/
+    function Scroll(options) {
+        this.el = options.el;
+        this.direction = options.direction; 
+        this.scrollx = document.getElementById(this.el);
+        this.ul = this.scrollx.getElementsByTagName('ul')[0];
+        this.lis = this.ul.getElementsByTagName('li');
+        this.index= 0;
+        this.init();
+    }
+    Scroll.prototype = {
+        init:function () {
+            if (this.direction == 'X') {
+                this.change('width','offsetWidth','marginLeft');
+            }
+            else if(this.direction =='Y'){
+                this.change('height','offsetHeight','marginTop');
+            }
+            
+        },
+        change:function (width,offset,margin) {
+            this.lisLen = this.lis.length;
+            this.lis_height = this.lis[0][offset];
+            this.ul.style[width] = this.lisLen*this.lis_height+'px'; 
+
+            var That =this;
+            setInterval(function(){
+                That.index --;
+                That.ul.style[margin]= That.index+'px';
+                if (Math.abs(That.index)>=That.lis_width) {
+                    That.ul.appendChild(That.ul.firstElementChild)
+                    That.index=0;
+                    That.ul.style[margin] = '0px';
+                }
+            }, 25);
+        }
+    }
+    new Scroll(
+        {
+            el:'scrollx',
+            direction:'X'
+        }
+    );
+    new Scroll({
+        el:'scrolly',
+        direction:'Y'
+    })
 </script>
 </body>
 </html>

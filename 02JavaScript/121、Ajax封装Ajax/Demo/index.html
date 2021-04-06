@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wwh</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+<script>
+    function ajax(options) {
+        var xhr = null;
+        if (window.XMLHttpRequest) {
+            xhr = new XMLHttpRequest();
+        }
+        else {
+            xhr =new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        //链接服务
+        if (options.type=='GET') {
+            xhr.open(options.type,options.url,options.async);
+            xhr.send(null);
+        }
+        else {
+            xhr.open(options.type,options.url,options.async);
+            xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+            xhr.send(formsParams(options.data));
+        }
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState==4&&xhr.state==200) {
+                options.success(xhr.responseText);
+            }
+        }
+
+        function formsParams(data) {
+            var arr = [];
+            for (var i in data) {
+                if (data.hasOwnProperty(i)) {
+                    arr.push(i+'='+data[i]);
+                }
+            }
+            return arr.join('&');
+        }
+        
+        
+    }
+    ajax({
+        url:'a.html',
+        type:'GET',
+        async:true,
+        data:{'name':'张三','age':18},
+        success:function (data) {
+            console.log(data);
+        }
+    })
+</script>
+</body>
+</html>
